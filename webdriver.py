@@ -72,10 +72,11 @@ def scrape(url):
         comments = driver.find_elements(By.XPATH, '//*[@id="content-text"]')
 
         #print(comments)
-
+        i = 1
         for c in comments:
             t = c.text
-            print(f'{t}\n')
+            print(f'N :: {i} | COMM :: {t} |\n')
+            i = i + 1
 
         driver.quit()
 
