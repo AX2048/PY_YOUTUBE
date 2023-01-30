@@ -59,15 +59,9 @@ def scrape(url):
 
     print('GET ::\n')
     driver.get(url)
-    wait = WebDriverWait(driver, 10)
-    #driver.implicitly_wait(2)
 
-    #print('SLEEP ::\n')
-    #time.sleep(0.2)
-
-    print('TRY ::\n')
     try:
-        print('T C ::\n')
+        print('TRY ::\n')
         #title = driver.find_elements(By.CLASS_NAME, "news__list__item__link__text")
         comments = driver.find_elements(By.XPATH, '//*[@id="content-text"]')
 
@@ -83,6 +77,7 @@ def scrape(url):
     except exceptions.NoSuchElementException:
         error = "Err excep 1"
         print(error)
+        driver.quit()
 
     return()
 
