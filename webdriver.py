@@ -53,7 +53,7 @@ def scrape(url):
     # Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
     options.add_argument("user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36")
 
-    s = Service(executable_path="/usr/bin/chromedriver")
+    s = Service(executable_path="chromedriver_linux64_109.0.5414.74/chromedriver") # chromedriver_linux64_109.0.5414.74/chromedriver | chromedriver_win32_109.0.5414.74\chromedriver.exe | /usr/bin/chromedriver
     driver = webdriver.Chrome(service=s, options=options)
 
 
